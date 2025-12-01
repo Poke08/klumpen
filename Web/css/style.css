@@ -1,0 +1,158 @@
+/* Generelle innstillinger */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #2f3640;
+}
+
+a {
+    text-decoration: none;
+    color: #e84118;
+    font-weight: bold;
+}
+
+/* Logout-knapp */
+a.logout {
+    float: right;
+    margin-top: -40px;
+    padding: 5px 10px;
+    border: 1px solid #e84118;
+    border-radius: 5px;
+    background-color: #f5f6fa;
+    transition: all 0.3s;
+}
+
+a.logout:hover {
+    background-color: #e84118;
+    color: white;
+}
+
+/* Navigasjon */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00a8ff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #0097e6;
+}
+
+/* Seksjoner */
+section {
+    display: none;
+    margin-top: 20px;
+}
+
+section.aktiv {
+    display: block;
+}
+
+/* Skjemaer */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+form input, form select, form button {
+    padding: 8px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #44bd32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #4cd137;
+}
+
+/* Tabeller */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #dcdde1;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #718093;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f2f6;
+}
+
+table button {
+    padding: 5px 10px;
+    background-color: #e84118;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+table button:hover {
+    background-color: #c23616;
+}
+
+/* Responsiv tabell */
+@media screen and (max-width: 768px) {
+    form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #dcdde1;
+    }
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
